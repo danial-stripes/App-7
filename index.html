@@ -6,26 +6,220 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
  
 Authors in chronological order of contribution:
-Author 1
-Author 2
+Tim Riedel
+Author Danial Qureshi
  
 Further Information:
-http://diystream.cns.utexas.edu/
-
+http://cns.utexas.edu/fri
+ 
 Research Educator:
 Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+Diagnose whether someone has a cold or allergies by basing the code on their responses and then supplying them with their results.
  
 Known Issues:
-blah, blah, blah, blah
--->
+Not available.
 
+https://www.w3schools.com/w3css/default.asp
+https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
+-->
+	
    <head> 
-      
-	   PUT YOUR OLD CODE IN HERE
-	   
-   </body>
+      <title>Hello World</title>  
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <link rel="stylesheet" href="w3.css">
+      <link rel="stylesheet" href="w3-colors-flat.css">
+   </head> 
+
+
+<script>
+        var allergy_count = 0;
+        var cold_count = 0;
+	// these are the variables. to to calculate the percentages, the count of each will be divided by six and then multiplied
+	var total = 6;
+
+        function allergyAdd(){ // this function is used to add 1 every time "yes" to allergy is recorded.
+            allergy_count = allergy_count + 1;
+		//alert(allergy_count);
+	}
+        function coldAdd(){ // this function is used to add 1 every time "yes" to cold is recorded.
+            cold_count = cold_count + 1;
+		//alert(cold_count);	
+        }
+function allergyPercent(){
+	allergyPercent=(allergy_count / 6)*100;
+	
+	
+	}
+	
+function coldPercent(){
+	coldPercent=(cold_count / 6)*100;
+	
+	}
+	
+	
+function showResults() {
+	coldPercent();
+	allergyPercent();
+	//var allergyPercent = allergy_count / total)*100;
+	//var coldPercent = cold_count / total)*100;
+	var resultText = document.getElementById("results");
+resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent + "%"
+//function to show the results of the probabilities
+}
+
+	
+	
+</script>
+	
+	
+
+<style>
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+
+<body>
+<div id="header" class="w3-container w3-flat-carrot">
+	<h1>Cold or Allergies?</h1>
+</div>
+	
+<div id="content" class="w3-container">
+	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+	
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+ 	
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+
+<div class="page" id="one">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 1</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p>Are your eyes watery or itchy?</p>
+	<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+	<a href="#two" onclick="coldAdd();" class="w3-btn w3-black">No</a>
+    	</div>
+</div><!-- /content and button for response -->
+</div>
+	
+<div class="page" id="two">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 2</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Do you have a fever?</p>
+	<a href="#three" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+	<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+										
+ </div><!-- /content and button for response-->
+</div>	
+										
+<div class="page" id="three">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 3</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Do you have a sore throat?</p>
+	<a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+	<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+	</div>
+</div><!-- /content and button for response -->
+	</div>
+
+	<div class="page" id="four">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 4</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Are your symptoms seasonal or chronic?</p>
+	<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+	<a href="#five" onclick="coldAdd();" class="w3-btn w3-black">No</a>
+	</div>
+</div><!-- /content for my 6th questioin. Added a button for my question -->
+	</div>
+
+	<div class="page" id="five">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 5</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Is your mucus clear?</p>
+		<a href="#six" onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+		<a href="#six" onclick="coldAdd();" class="w3-btn w3-black">No</a>
+	</div>
+</div><!-- /content and asks the question I created for cold -->
+	</div>	
+
+	<div class="page" id="six">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 6</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Have your symptoms changed?</p>
+		<a href="#seven" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+		<a href="#seven" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+	</div>
+</div><!-- /content I added for the last question for allergy -->
+       </div>
+
+
+<!-- This produces the results page-->	
+<div class="page" id="seven"> 
+	<!-- This produces the header with the title "Results" -->
+	<div class="w3-container w3-flat-carrot">
+		<div id="header" class="w3-container w3-flat-carrot">
+			<h1>Results</h1>
+		
+		
+	</div>
+	
+		
+	<div id="content" class="w3-container">
+		<!-- This is the results -->
+		<button onclick= "showResults()">Results</button>
+		<p id="results">Results Here</p>
+	
+		
+		
+<a href="#one" class="w3-btn w3-black"> Go to Page One </a>
+ </div><!-- /content -->
+	</div>
+<!--button to go back to page one-->
+
+
+
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+
+</body>
 </html>
