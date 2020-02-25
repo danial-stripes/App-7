@@ -36,36 +36,36 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-        var allergy_count = 0;
-        var cold_count = 0;
+        var tensiontype-headache_count = 0;
+        var migrane_count = 0;
 	// these are the variables. to to calculate the percentages, the count of each will be divided by six and then multiplied
-	var total = 6;
+	var total = 4;
 
-        function allergyAdd(){ // this function is used to add 1 every time "yes" to allergy is recorded.
-            allergy_count = allergy_count + 1;
-		//alert(allergy_count);
+        function tensiontypeheadacheAdd(){ // this function is used to add 1 every time "yes" to tension type headache is recorded.
+            tensiontypeheadache_count = tensiontypeheadache_count + 1;
+		//alert(tensiontypeheadache_count);
 	}
-        function coldAdd(){ // this function is used to add 1 every time "yes" to cold is recorded.
-            cold_count = cold_count + 1;
-		//alert(cold_count);	
+        function migraneAdd(){ // this function is used to add 1 every time "yes" to migrane is recorded.
+            migrane_count = migrane_count + 1;
+		//alert(migrane_count);	
         }
-function allergyPercent(){
-	allergyPercent=(allergy_count / 6)*100;
+function tensiontypeheadachePercent(){
+	tensiontypeheadachePercent=(tensiontypeheadache_count / 4)*100;
 	
 	
 	}
 	
-function coldPercent(){
-	coldPercent=(cold_count / 6)*100;
+function migranePercent(){
+	migranePercent=(migrane_count / 4)*100;
 	
 	}
 	
 	
 function showResults() {
-	coldPercent();
-	allergyPercent();
-	//var allergyPercent = allergy_count / total)*100;
-	//var coldPercent = cold_count / total)*100;
+	tensiontypeheadachePercent();
+	migranePercent();
+	//var tensiontypeheadachePercent = tensiontypeheadache_count / total)*100;
+	//var migranePercent = migrane_count / total)*100;
 	var resultText = document.getElementById("results");
 resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent + "%"
 //function to show the results of the probabilities
@@ -105,7 +105,7 @@ resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> 
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	<p>Are you unsure if you have a migrane or a tension-type headache? Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
