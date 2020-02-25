@@ -67,7 +67,7 @@ function showResults() {
 	//var tensiontypeheadachePercent = tensiontypeheadache_count / total)*100;
 	//var migranePercent = migrane_count / total)*100;
 	var resultText = document.getElementById("results");
-resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent + "%"
+resultText.innerHTML = "Probability it is a tension type headache =" + tensiontypeheadachePercent + "<br> Probability it is a migrane =" + migranePercent + "%"
 //function to show the results of the probabilities
 }
 
@@ -105,7 +105,7 @@ resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> 
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you unsure if you have a migrane or a tension-type headache? Answer a few short questions to find out!</p>
+	<p>Are you unsure if you have a tension-type headache or a migrane? Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
@@ -120,7 +120,7 @@ resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> 
 	
     	<div id="content" class="w3-container">
         <p>Do you have pain on both sides of your head?</p>
-	<a href="#two" onclick="tension-typeheadacheAdd();" class="w3-btn w3-black"> Yes</a>
+	<a href="#two" onclick="tensiontypeheadacheAdd();" class="w3-btn w3-black"> Yes</a>
 	<a href="#two" onclick="migraneAdd();" class="w3-btn w3-black"> No</a>
     	</div>
 </div><!-- /content and button for response -->
@@ -133,7 +133,7 @@ resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> 
 	
 	<div id="content" class="w3-container">
 	<p>Do you have tight pressure in your head rather than throbbing?</p>
-	<a href="#three" onclick="tension-typeheadacheAdd();" class="w3-btn w3-black"> Yes</a>
+	<a href="#three" onclick="tensiontypeheadacheAdd();" class="w3-btn w3-black"> Yes</a>
 	<a href="#three" onclick="migraneAdd();" class="w3-btn w3-black">No</a>
 										
  </div><!-- /content and button for response-->
@@ -147,7 +147,7 @@ resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> 
 	<div id="content" class="w3-container">
 	<p>Does the pain get worse the more physically active you are?</p>
 	<a href="#four" onclick="migraneAdd();" class="w3-btn w3-black"> Yes</a>
-	<a href="#four" onclick="tension-typeheadacheAdd();" class="w3-btn w3-black">No</a>
+	<a href="#four" onclick="tensiontypeheadacheAdd();" class="w3-btn w3-black">No</a>
 	</div>
 </div><!-- /content and button for response -->
 	</div>
@@ -160,7 +160,7 @@ resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> 
 	<div id="content" class="w3-container">
 	<p>Do you have sensitivity to light, sounds, and smells?</p>
 	<a href="#five" onclick="migraneAdd();" class="w3-btn w3-black"> Yes</a>
-	<a href="#five" onclick="tension-typeheadacheAdd();" class="w3-btn w3-black">No</a>
+	<a href="#five" onclick="tensiontypeheadacheAdd();" class="w3-btn w3-black">No</a>
 	</div>
 </div><!-- /content for my 6th questioin. Added a button for my question -->
 	</div>
