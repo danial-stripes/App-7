@@ -101,7 +101,7 @@ resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> 
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Cold or Allergies?</h1>
+	<h1>Tension-type Headache or Migrane?</h1>
 </div>
 	
 <div id="content" class="w3-container">
@@ -119,9 +119,9 @@ resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> 
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Are your eyes watery or itchy?</p>
-	<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-	<a href="#two" onclick="coldAdd();" class="w3-btn w3-black">No</a>
+        <p>Do you have pain on both sides of your head?</p>
+	<a href="#two" onclick="tension-typeheadacheAdd();" class="w3-btn w3-black"> Yes</a>
+	<a href="#two" onclick="migraneAdd();" class="w3-btn w3-black"> No</a>
     	</div>
 </div><!-- /content and button for response -->
 </div>
@@ -132,9 +132,9 @@ resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> 
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Do you have a fever?</p>
-	<a href="#three" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
-	<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+	<p>Do you have tight pressure in your head rather than throbbing?</p>
+	<a href="#three" onclick="tension-typeheadacheAdd();" class="w3-btn w3-black"> Yes</a>
+	<a href="#three" onclick="migraneAdd();" class="w3-btn w3-black">No</a>
 										
  </div><!-- /content and button for response-->
 </div>	
@@ -145,9 +145,9 @@ resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> 
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Do you have a sore throat?</p>
-	<a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
-	<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+	<p>Does the pain get worse the more physically active you are?</p>
+	<a href="#four" onclick="migraneAdd();" class="w3-btn w3-black"> Yes</a>
+	<a href="#four" onclick="tension-typeheadacheAdd();" class="w3-btn w3-black">No</a>
 	</div>
 </div><!-- /content and button for response -->
 	</div>
@@ -158,38 +158,12 @@ resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> 
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Are your symptoms seasonal or chronic?</p>
-	<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-	<a href="#five" onclick="coldAdd();" class="w3-btn w3-black">No</a>
+	<p>Do you have sensitivity to light, sounds, and smells?</p>
+	<a href="#five" onclick="migraneAdd();" class="w3-btn w3-black"> Yes</a>
+	<a href="#five" onclick="tension-typeheadacheAdd();" class="w3-btn w3-black">No</a>
 	</div>
 </div><!-- /content for my 6th questioin. Added a button for my question -->
 	</div>
-
-	<div class="page" id="five">
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 5</h1>
-	</div>
-	
-	<div id="content" class="w3-container">
-		<p>Is your mucus clear?</p>
-		<a href="#six" onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-		<a href="#six" onclick="coldAdd();" class="w3-btn w3-black">No</a>
-	</div>
-</div><!-- /content and asks the question I created for cold -->
-	</div>	
-
-	<div class="page" id="six">
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 6</h1>
-	</div>
-	
-	<div id="content" class="w3-container">
-		<p>Have your symptoms changed?</p>
-		<a href="#seven" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
-		<a href="#seven" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
-	</div>
-</div><!-- /content I added for the last question for allergy -->
-       </div>
 
 
 <!-- This produces the results page-->	
