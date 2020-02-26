@@ -7,7 +7,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Author Danial Qureshi
+Danial Qureshi
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -17,7 +17,7 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-Diagnose whether someone has a tension type headache or migrane by basing the code on their responses and then supplying them with their results.
+The goal of this code is to diagnose whether someone has a tension type headache or migrane by basing the code on their responses and then supplying them with their results.
  
 Known Issues:
 A known issue of the goal is that the type of headache that the person taking the survey has may not even be a tension type headache or migrane because there are many more types of headaches. This determination is much more extensive than simply diagnosing the type of headache with 4 questions.
@@ -27,59 +27,57 @@ https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
 	
-   <head> 
-      <title>Hello World</title>  
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="apple-mobile-web-app-capable" content="yes">
-      <link rel="stylesheet" href="w3.css">
-      <link rel="stylesheet" href="w3-colors-flat.css">
-   </head> 
+	<head> 
+		<title>Hello World</title>  
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<link rel="stylesheet" href="w3.css">
+		<link rel="stylesheet" href="w3-colors-flat.css">
+	</head> 
 
 
-<script>
-	// This defines and starts the variables because the initial value is set to 0.
-        var tensiontypeheadache_count = 0;
-        var migrane_count = 0;
+	<script>
+		// This defines and starts the variables because the initial value is set to 0.
+       		var tensiontypeheadache_count = 0;
+        	var migrane_count = 0;
 	
 	
-	
-	
-	// these are the variables. to to calculate the percentages, the count of each will be divided by four and then multiplied
-	var total = 4;
+		// these are the variables. to to calculate the percentages, the count of each will be divided by four and then multiplied
+		var total = 4;
 
-        function tensiontypeheadacheAdd(){ // this function is used to add 1 every time "yes" to tension type headache is recorded.
-            tensiontypeheadache_count = tensiontypeheadache_count + 1;
+        	function tensiontypeheadacheAdd(){ // this function is used to add 1 every time "yes" to tension type headache is recorded.
+            	tensiontypeheadache_count = tensiontypeheadache_count + 1;
 		//alert(tensiontypeheadache_count);
-	}
-        function migraneAdd(){ // this function is used to add 1 every time "yes" to migrane is recorded.
-            migrane_count = migrane_count + 1;
+		
+		}
+        	function migraneAdd(){ // this function is used to add 1 every time "yes" to migrane is recorded.
+            	migrane_count = migrane_count + 1;
 		//alert(migrane_count);	
-        }
-function tensiontypeheadachePercent(){
-	tensiontypeheadachePercent=(tensiontypeheadache_count / 4)*100;
+			
+        	}
+		function tensiontypeheadachePercent(){
+		tensiontypeheadachePercent=(tensiontypeheadache_count / 4)*100;
 	
 	
+		}
+		// This function calculates the percentage chance of each variable by using the data the person who took the survey entered. 
+		// The variable resultText outputs the calculations done by the function on the results page
+		function migranePercent(){
+		migranePercent=(migrane_count / 4)*100;
+	
+		}
+	
+	
+		function showResults() {
+		tensiontypeheadachePercent();
+		migranePercent();
+		//var tensiontypeheadachePercent = tensiontypeheadache_count / total)*100;
+		//var migranePercent = migrane_count / total)*100;
+		var resultText = document.getElementById("results");
+		resultText.innerHTML = "Probability it is a tensiontypeheadache =" + tensiontypeheadachePercent + "% <br> Probability it is a migrane =" + migranePercent + "%";
+		//function to show the results of the probabilities
+		
 	}
-	// This function calculates the percentage chance of each variable by using the data the person who took the survey entered. 
-	// The variable resultText outputs the calculations done by the function on the results page
-function migranePercent(){
-	migranePercent=(migrane_count / 4)*100;
-	
-	}
-	
-	
-function showResults() {
-	tensiontypeheadachePercent();
-	migranePercent();
-	//var tensiontypeheadachePercent = tensiontypeheadache_count / total)*100;
-	//var migranePercent = migrane_count / total)*100;
-	var resultText = document.getElementById("results");
-resultText.innerHTML = "Probability it is tensiontypeheadache =" + tensiontypeheadachePercent + "<br> Probability it is a migrane =" + migranePercent + "%"
-//function to show the results of the probabilities
-}
-
-	
-	
 </script>
 	
 	
