@@ -127,60 +127,65 @@ img, object{
 	
 <!-- This codes for page one. -->
 <div class="page" id="one">
+	<!-- The question number is set as the header in an orange color. -->
 	<!-- This produces the page for the first question -->
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
 	</div>
-	
+	<!-- this prints the question and gives a black button that provides two statements as answer choices. The href attribute directs the user to the next page. -->
     	<div id="content" class="w3-container">
         <p>Do you have pain on both sides of your head?</p>
 	<a href="#two" onclick="tensiontypeheadacheAdd();" class="w3-btn w3-black"> Yes</a>
 	<a href="#two" onclick="migraneAdd();" class="w3-btn w3-black"> No</a>
     	</div>
-</div><!-- /content and button for response -->
 </div>
-	
+<!-- This codes for page two.-->
 <div class="page" id="two">
+	<!-- The question number is set as the header in an orange color. -->
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
 	</div>
-	
+	<!-- This prints the question and provides a black button with two statements as answer choices. 
+	The href attribute directs the user to the next page. --> 
 	<div id="content" class="w3-container">
-	<p>Do you have tight pressure in your head rather than throbbing?</p>
-	<a href="#three" onclick="tensiontypeheadacheAdd();" class="w3-btn w3-black"> Yes</a>
-	<a href="#three" onclick="migraneAdd();" class="w3-btn w3-black">No</a>
-										
- </div><!-- /content and button for response-->
+		<p>Do you have tight pressure in your head rather than throbbing?</p>
+		<a href="#three" onclick="tensiontypeheadacheAdd();" class="w3-btn w3-black"> Yes</a>
+		<a href="#three" onclick="migraneAdd();" class="w3-btn w3-black">No</a>
+	</div>
 </div>	
-										
+<!-- /content and button for response-->										
 <div class="page" id="three">
+	<!-- The question number is set as the header in an orange color. -->
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 3</h1>
 	</div>
-	
+	<!-- This prints the question and provides a black button with two statements as answer choices. 
+	The href attribute directs the user to the next page. -->
 	<div id="content" class="w3-container">
 	<p>Does the pain get worse the more physically active you are?</p>
 	<a href="#four" onclick="migraneAdd();" class="w3-btn w3-black"> Yes</a>
 	<a href="#four" onclick="tensiontypeheadacheAdd();" class="w3-btn w3-black">No</a>
 	</div>
-</div><!-- /content and button for response -->
-	</div>
-
+</div>
+<!-- /content and button for response -->
 	<div class="page" id="four">
+		<!-- The question number is set as the header in an orange color. -->
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 4</h1>
 	</div>
-	
+	<!-- This prints the question and provides a black button with two statements as answer choices. 
+	The href attribute directs the user to the next page. -->
 	<div id="content" class="w3-container">
-	<p>Do you have sensitivity to light, sounds, and smells?</p>
-	<a href="#five" onclick="migraneAdd();" class="w3-btn w3-black"> Yes</a>
-	<a href="#five" onclick="tensiontypeheadacheAdd();" class="w3-btn w3-black">No</a>
+		<p>Do you have sensitivity to light, sounds, and smells?</p>
+		<a href="#five" onclick="migraneAdd();" class="w3-btn w3-black"> Yes</a>
+		<a href="#five" onclick="tensiontypeheadacheAdd();" class="w3-btn w3-black">No</a>
 	</div>
-</div><!-- /content for my 4th question. Added a button for my question -->
+</div>
+<!-- /content for my 4th question. Added a button for my question -->
 	</div>
 
 
-<!-- This produces the results page-->	
+<!-- This produces the page five-->	
 <div class="page" id="five"> 
 	<!-- This produces the header with the title "Results" -->
 	<div class="w3-container w3-flat-carrot">
