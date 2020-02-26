@@ -17,9 +17,10 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-Diagnose whether someone has a cold or allergies by basing the code on their responses and then supplying them with their results.
+Diagnose whether someone has a tension type headache or migrane by basing the code on their responses and then supplying them with their results.
  
 Known Issues:
+A known issue of the goal is that the type of headache that the person taking the survey has may not even be a tension type headache or migrane because there are many more types of headaches. This determination is much more extensive than simply diagnosing the type of headache with 4 questions.
 Not available.
 
 https://www.w3schools.com/w3css/default.asp
@@ -36,8 +37,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
+	// This defines and starts the variables because the initial value is set to 0.
         var tensiontypeheadache_count = 0;
         var migrane_count = 0;
+	
+	
+	
+	
 	// these are the variables. to to calculate the percentages, the count of each will be divided by four and then multiplied
 	var total = 4;
 
@@ -54,7 +60,8 @@ function tensiontypeheadachePercent(){
 	
 	
 	}
-	
+	// This function calculates the percentage chance of each variable by using the data the person who took the survey entered. 
+	// The variable resultText outputs the calculations done by the function on the results page
 function migranePercent(){
 	migranePercent=(migrane_count / 4)*100;
 	
