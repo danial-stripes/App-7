@@ -34,32 +34,34 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<link rel="stylesheet" href="w3.css">
 		<link rel="stylesheet" href="w3-colors-flat.css">
 	</head> 
-
-
+	
+<!-- results will display the probability between a tension-type headache or a migrane -->
+<!-- copy pasted my code from app 3 right here -->
 <script>
 	// This defines and starts the variables because the initial value is set to 0.
        	var tensiontypeheadache_count = 0;
         var migrane_count = 0;
 	
-	
-	// these are the variables. to calculate the percentages, the count of each will be divided by four and then multiplied
-	var total = 4;
 
         function tensiontypeheadacheAdd(){ // this function is used to add 1 every time "yes" to tension type headache is recorded.
             tensiontypeheadache_count = tensiontypeheadache_count + 1;
 		//alert(tensiontypeheadache_count);
 		
 	}
+	
+	
         function migraneAdd(){ // this function is used to add 1 every time "yes" to migrane is recorded.
             migrane_count = migrane_count + 1;
 		//alert(migrane_count);	
 			
         }
+	
 	function tensiontypeheadachePercent(){
 		tensiontypeheadachePercent=(tensiontypeheadache_count / 4)*100;
 	
-	
+
 	}
+	
 	// This function calculates the percentage chance of each variable by using the data the person who took the survey entered. 
 	// The variable resultText outputs the calculations done by the function on the results page
 	function migranePercent(){
@@ -74,7 +76,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		//var tensiontypeheadachePercent = tensiontypeheadache_count / total)*100;
 		//var migranePercent = migrane_count / total)*100;
 		var resultText = document.getElementById("results");
-	resultText.innerHTML = "Probability it is tensiontypeheadache =" + tensiontypeheadachePercent + "<br> Probability it is a migrane =" + migranePercent + "%"
+	resultText.innerHTML = "Probability it is tensiontypeheadache =" + tensiontypeheadachePercent + "%<br> Probability it is a migrane =" + migranePercent + "%";
 	//function to show the results of the probabilities	
 	}
 	
