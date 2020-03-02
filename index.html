@@ -21,7 +21,6 @@ The goal of this code is to diagnose whether someone has a tension type headache
  
 Known Issues:
 A known issue of the goal is that the type of headache that the person taking the survey has may not even be a tension type headache or migrane because there are many more types of headaches. This determination is much more extensive than simply diagnosing the type of headache with 4 questions.
-Not available.
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -41,6 +40,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	// This defines and starts the variables because the initial value is set to 0.
        	var tensiontypeheadache_count = 0;
         var migrane_count = 0;
+	// these are the variables. to to calculate the percentages, the count of each will be divided by four and then multiplied by 100
 	
 
         function tensiontypeheadacheAdd(){ // this function is used to add 1 every time "yes" to tension type headache is recorded.
@@ -56,7 +56,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 			
         }
 	
-	function tensiontypeheadachePercent(){
+	function tensiontypeheadachePercent(){ // this function is used to calculate the percentage of tension type headache. it divides the count by 4 and then multiplies the result by 100.
 		tensiontypeheadachePercent=(tensiontypeheadache_count / 4)*100;
 	
 
@@ -64,13 +64,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	// This function calculates the percentage chance of each variable by using the data the person who took the survey entered. 
 	// The variable resultText outputs the calculations done by the function on the results page
-	function migranePercent(){
+	function migranePercent(){ // this function is used to calculate the percentage of migrane. it divides the count by 4 and then multiplies the result by 100.
 	migranePercent=(migrane_count / 4)*100;
 	
 	}
 	
 	
-	function showResults() {
+	function showResults() { // This function displays the percent of tension type headache and the percent of migrane.
 		tensiontypeheadachePercent();
 		migranePercent();
 		//var tensiontypeheadachePercent = tensiontypeheadache_count / total)*100;
@@ -112,81 +112,83 @@ img, object{
 </style>
 
 <body>
-<div id="header" class="w3-container w3-flat-carrot">
-	<h1>Tension-type Headache or Migrane?</h1>
+<div id="header" class="w3-container w3-flat-carrot"> <!--This creates the header of the first page and it advances its appearance. -->
+	<h1>Tension-type Headache or Migrane?</h1> <!-- This is the header of the home page. -->
 </div>
 	
 <div id="content" class="w3-container">
 	<p>Are you unsure if you have a tension-type headache or a migrane? Answer a few short questions to find out!</p>
-	
+	<!-- in between the <p> and the <p> in the line above is the first question. -->
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin. This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
- 	
+ 	<!-- this creates the grey button to allow the viewer to get started and allows them to go to the next page -->
+	<!-- the two statements following this statement warn the viewer that this app is solely for UT students learning purposes and should not be used to actually diagnose anyone -->
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 	<img src="https://www.pngitem.com/pimgs/m/212-2120238_body-therapy-mumps-menopause-child-headache-clipart-headache.png" alt="girl with head pain">
-	
+	<!-- the code above helps me add a picture to the page -->
 <!-- This codes for page one. -->
-<div class="page" id="one">
+<div class="page" id="one"> <!-- This creates the next page and also names the page as "one" -->
 	<!-- The question number is set as the header in an orange color. -->
 	<!-- This produces the page for the first question -->
-	<div id="header" class="w3-container w3-flat-carrot">
+	<div id="header" class="w3-container w3-flat-carrot"> <!--This creates a header for the page and defines its type/appearance. -->
 		<h1>Question 1</h1>
 	</div>
 	<!-- this prints the question and gives a black button that provides two statements as answer choices. The href attribute directs the user to the next page. -->
-    	<div id="content" class="w3-container">
-        <p>Do you have pain on both sides of your head?</p>
-	<a href="#two" onclick="tensiontypeheadacheAdd();" class="w3-btn w3-black"> Yes</a>
-	<a href="#two" onclick="migraneAdd();" class="w3-btn w3-black"> No</a>
+    	<div id="content" class="w3-container"> <!-- This line of code differentiates the next line from the header and makes new space for it -->
+        <p>Are your eyes watery or itchy?</p> <!-- This line creattes a question for question one -->
+        <p>Do you have pain on both sides of your head?</p> <!-- This line creattes a question for question one -->
+	<a href="#two" onclick="tensiontypeheadacheAdd();" class="w3-btn w3-black"> Yes</a> <!-- this creates the button for yes and when you click it, the count for tension type headache symptoms increases-->
+	<a href="#two" onclick="migraneAdd();" class="w3-btn w3-black"> No</a> <!-- this creates the button for no and when you click it, the count for migrane symptoms decreases-->
     	</div>
 </div>
 <!-- This codes for page two.-->
-<div class="page" id="two">
+<div class="page" id="two"> <!-- This creates the next page and also names the page as "two" -->
 	<!-- The question number is set as the header in an orange color. -->
-	<div id="header" class="w3-container w3-flat-carrot">
+	<div id="header" class="w3-container w3-flat-carrot"> <!--This creates a header for the page and defines its type/appearance. -->
 		<h1>Question 2</h1>
 	</div>
 	<!-- This prints the question and provides a black button with two statements as answer choices. 
 	The href attribute directs the user to the next page. --> 
 	<div id="content" class="w3-container">
-		<p>Do you have tight pressure in your head rather than throbbing?</p>
-		<a href="#three" onclick="tensiontypeheadacheAdd();" class="w3-btn w3-black"> Yes</a>
-		<a href="#three" onclick="migraneAdd();" class="w3-btn w3-black">No</a>
+		<p>Do you have tight pressure in your head rather than throbbing?</p> <!-- This line creates a question for question two -->
+		<a href="#three" onclick="tensiontypeheadacheAdd();" class="w3-btn w3-black"> Yes</a> <!-- this creates the button for yes and when you click it, the count for tension type headache symptoms increases-->
+		<a href="#three" onclick="migraneAdd();" class="w3-btn w3-black">No</a> <!-- this creates the button for no and when you click it, the count for migrane symptoms decreases-->
 	</div>
 </div>	
 <!-- /content and button for response-->										
-<div class="page" id="three">
+<div class="page" id="three"> <!-- This creates the next page and also names the page as "three" -->
 	<!-- The question number is set as the header in an orange color. -->
-	<div id="header" class="w3-container w3-flat-carrot">
+	<div id="header" class="w3-container w3-flat-carrot"> <!--This creates a header for the page and defines its type/appearance. -->
 		<h1>Question 3</h1>
 	</div>
 	<!-- This prints the question and provides a black button with two statements as answer choices. 
 	The href attribute directs the user to the next page. -->
 	<div id="content" class="w3-container">
-	<p>Does the pain get worse the more physically active you are?</p>
-	<a href="#four" onclick="migraneAdd();" class="w3-btn w3-black"> Yes</a>
-	<a href="#four" onclick="tensiontypeheadacheAdd();" class="w3-btn w3-black">No</a>
+	<p>Does the pain get worse the more physically active you are?</p> <!-- This line creates a question for question three -->
+	<a href="#four" onclick="migraneAdd();" class="w3-btn w3-black"> Yes</a> <!-- this creates the button for yes and when you click it, the count for tension type headache symptoms increases-->
+	<a href="#four" onclick="tensiontypeheadacheAdd();" class="w3-btn w3-black">No</a> <!-- this creates the button for no and when you click it, the count for migrane symptoms decreases-->
 	</div>
 </div>
 <!-- content for page four. -->
-	<div class="page" id="four">
+	<div class="page" id="four"> <!-- This creates the next page and also names the page as "four" -->
 		<!-- The question number is set as the header in an orange color. -->
-	<div id="header" class="w3-container w3-flat-carrot">
+	<div id="header" class="w3-container w3-flat-carrot"> <!--This creates a header for the page and defines its type/appearance. -->
 		<h1>Question 4</h1>
 	</div>
 	<!-- This prints the question and provides a black button with two statements as answer choices. 
 	The href attribute directs the user to the next page. -->
 	<div id="content" class="w3-container">
-		<p>Do you have sensitivity to light, sounds, and smells?</p>
-		<a href="#five" onclick="migraneAdd();" class="w3-btn w3-black"> Yes</a>
-		<a href="#five" onclick="tensiontypeheadacheAdd();" class="w3-btn w3-black">No</a>
+		<p>Do you have sensitivity to light, sounds, and smells?</p> <!-- This line creates a question for question four -->
+		<a href="#five" onclick="migraneAdd();" class="w3-btn w3-black"> Yes</a> <!-- this creates the button for yes and when you click it, the count for tension type headache symptoms increases-->
+		<a href="#five" onclick="tensiontypeheadacheAdd();" class="w3-btn w3-black">No</a> <!-- this creates the button for no and when you click it, the count for migrane symptoms decreases-->
 	</div>
 </div><!-- This code is for page five -->
 	</div>
 
 
 <!-- This produces the page five-->	
-<div class="page" id="five"> 
+<div class="page" id="five"> <!-- This creates the next page and also names the page as "five" -->
 	<!-- This question number 5 is set for the header color of orange. -->
 	<div class="w3-container w3-flat-carrot">
 		<div id="header" class="w3-container w3-flat-carrot">
