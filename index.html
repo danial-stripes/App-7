@@ -48,33 +48,49 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function coronavirusAdd(){ // this function is used to add 1 every time "yes" to coronavirus is recorded.
             coronavirus_count = coronavirus_count + 1;
 		//alert(coronavirus_count);
+		
 	}
+	
         function coldAdd(){ // this function is used to add 1 every time "yes" to cold is recorded.
             cold_count = cold_count + 1;
 		//alert(cold_count);	
+		
 	}
+	
         function fluAdd(){ // this function is used to add 1 every time "yes" to flu is recorded.
             flu_count = flu_count + 1;
-		//alert(flu_count);		
+		//alert(flu_count);	
+		
 	}
+	
         function seasonalallergiesAdd(){ // this function is used to add 1 every time "yes" to seasonalallergies is recorded.
             seasonalallergies_count = seasonalallergies_count + 1;
-		//alert(seasonalallergies_count);			
+		//alert(seasonalallergies_count);	
+		
         }
+	
 // This function calculates the percentage chance of each variable by using the data the person who took the survey entered. 
 // The variable resultText outputs the calculations done by the function on the results page
 	function coronavirusPercent(){ // this function is used to calculate the percentage of coronavirus. it divides the count by 11 and then multiplies the result by 100.
 		coronavirusPercent=(coronavirus_count / 11)*100;
+		
 	}
+	
 	function coldPercent(){ // this function is used to calculate the percentage of cold. it divides the count by 11 and then multiplies the result by 100.
 		coldPercent=(cold_count / 11)*100;
+		
 	}
+	
 	function fluPercent(){ // this function is used to calculate the percentage of flu. it divides the count by 11 and then multiplies the result by 100.
 		fluPercent=(flu_count / 11)*100;
+		
 	}
+	
 	function seasonalallergiesPercent(){ // this function is used to calculate the percentage of seasonalallergies. it divides the count by 11 and then multiplies the result by 100.
 		seasonalallergiesPercent=(seasonalallergies_count / 11)*100;
+		
 	}
+	
 	function showResults() { // This function displays the percent of each condition.
 		coronavirusPercent();
 		coldPercent();
@@ -85,7 +101,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		//var fluPercent = flu_count / total)*100;
 		//var seasonalallergiesPercent = seasonalallergies_count / total)*100;
 		var resultText = document.getElementById("results");
-	resultText.innerHTML = "Probability it is coronavirus =" + coronavirusPercent + "% <br> Probability it is a cold = " + coldPercent +  "%<br> Probability it is a flu =" + fluPercent "%<br> Probability it is seasonalallergies =" + seasonalallergiesPercent + "%";
+	resultText.innerHTML = "Probability it is coronavirus =" + coronavirusPercent + "%<br> Probability it is a cold = " + coldPercent +  "%<br> Probability it is a flu =" + fluPercent + "%<br> Probability it is seasonalallergies =" + seasonalallergiesPercent + "%";
 	//function to show the results of the probabilities	
 	}
 	
