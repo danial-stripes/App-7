@@ -48,50 +48,32 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function coronavirusAdd(){ // this function is used to add 1 every time "yes" to coronavirus is recorded.
             coronavirus_count = coronavirus_count + 1;
 		//alert(coronavirus_count);
-		
 	}
-	
         function coldAdd(){ // this function is used to add 1 every time "yes" to cold is recorded.
             cold_count = cold_count + 1;
 		//alert(cold_count);	
-	
 	}
-	
-	
         function fluAdd(){ // this function is used to add 1 every time "yes" to flu is recorded.
             flu_count = flu_count + 1;
-		//alert(flu_count);	
-		
+		//alert(flu_count);		
 	}
-	
-	
         function seasonalallergiesAdd(){ // this function is used to add 1 every time "yes" to seasonalallergies is recorded.
             seasonalallergies_count = seasonalallergies_count + 1;
-		//alert(seasonalallergies_count);	
-			
+		//alert(seasonalallergies_count);			
         }
-	
+// This function calculates the percentage chance of each variable by using the data the person who took the survey entered. 
+// The variable resultText outputs the calculations done by the function on the results page
 	function coronavirusPercent(){ // this function is used to calculate the percentage of coronavirus. it divides the count by 11 and then multiplies the result by 100.
 		coronavirusPercent=(coronavirus_count / 11)*100;
-	
-
 	}
-	
-	// This function calculates the percentage chance of each variable by using the data the person who took the survey entered. 
-	// The variable resultText outputs the calculations done by the function on the results page
 	function coldPercent(){ // this function is used to calculate the percentage of cold. it divides the count by 11 and then multiplies the result by 100.
 		coldPercent=(cold_count / 11)*100;
-	
 	}
-	
 	function fluPercent(){ // this function is used to calculate the percentage of flu. it divides the count by 11 and then multiplies the result by 100.
 		fluPercent=(flu_count / 11)*100;
-	
 	}
-	
 	function seasonalallergiesPercent(){ // this function is used to calculate the percentage of seasonalallergies. it divides the count by 11 and then multiplies the result by 100.
 		seasonalallergiesPercent=(seasonalallergies_count / 11)*100;
-	
 	}
 	function showResults() { // This function displays the percent of tension type headache and the percent of migrane.
 		coronavirusPercent();
@@ -145,15 +127,13 @@ img, object{
 	
 <div id="content" class="w3-container">
 	<p>Are you sick but are unsure if you have coronavirus (COVID-19), Cold, Flu, or Seasonal Allergies? Answer a few short questions to find out!</p>
-	<!-- in between the <p> and the <p> in the line above is the first question. -->
+	<!-- in between the <p> and the <p> in the line above is the title. -->
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
-	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin. This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin. This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	<!-- this creates the grey button to allow the viewer to get started and allows them to go to the next page -->
 	<!-- the two statements following this statement warn the viewer that this app is solely for UT students learning purposes and should not be used to actually diagnose anyone -->
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-	<img src="https://www.pngitem.com/pimgs/m/212-2120238_body-therapy-mumps-menopause-child-headache-clipart-headache.png" alt="girl with head pain">
-	<!-- the code above helps me add a picture to the page -->
 <!-- This codes for page one. -->
 <div class="page" id="one"> <!-- This creates the next page and also names the page as "one" -->
 	<!-- The question number is set as the header in an orange color. -->
