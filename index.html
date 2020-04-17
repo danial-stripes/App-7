@@ -85,7 +85,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		//var fluPercent = flu_count / total)*100;
 		//var seasonalallergiesPercent = seasonalallergies_count / total)*100;
 		var resultText = document.getElementById("results");
-	resultText.innerHTML = "Probability it is coronavirus =" + coronavirusPercent + "% <br> Probability it is a cold = " + coldPercent +  "%<br> Probability it is a flu =" + fluPercent "%<br> Probability it is seasonalallergies =" + seasonalallergiesPercent;
+	resultText.innerHTML = "% <b> Probability it is coronavirus =" + coronavirusPercent + "% <br> Probability it is a cold = " + coldPercent +  "%<br> Probability it is a flu =" + fluPercent "%<br> Probability it is seasonalallergies =" + seasonalallergiesPercent;
 	//function to show the results of the probabilities	
 	}
 	
@@ -145,7 +145,7 @@ img, object{
 	<!-- This prints the question and provides a black button with four statements as answer choices. 
 	The href attribute directs the user to the next page. --> 
     	<div id="content" class="w3-container"> <!-- This line of code differentiates the next line from the header and makes new space for it -->
-        	<p>What are the lengths of your symptoms?</p> <!-- This line creattes a question for question one -->
+        	<p>What are the lengths of your symptoms?</p> <!-- This line creates a question for question one -->
 		<a href="#two" onclick="coronavirusAdd();" class="w3-btn w3-black"> 7-25 days</a> <!-- this creates the button for 7-25 and when you click it, the count for coronavirus symptoms increases-->
 		<a href="#two" onclick="coldAdd();" class="w3-btn w3-black"> Less than 14 days</a> <!-- this creates the button for Less than 14 days and when you click it, the count for cold symptoms decreases-->
     		<a href="#two" onclick="fluAdd();" class="w3-btn w3-black"> 7-14 days</a> <!-- this creates the button for 7-14 days and when you click it, the count for flu symptoms increases-->
@@ -174,7 +174,7 @@ img, object{
 	<div id="header" class="w3-container w3-flat-carrot"> <!--This creates a header for the page and defines its type/appearance. -->
 		<h1>Question 3</h1>
 	</div>
-	<!-- This prints the question and provides a black button with two statements as answer choices. 
+	<!-- This prints the question and provides a black button with four statements as answer choices. 
 	The href attribute directs the user to the next page. -->
 	<div id="content" class="w3-container">
 		<p>Are you experiencing shortness of breath?</p> <!-- This line creates a question for question three -->
@@ -309,14 +309,14 @@ img, object{
 <div class="page" id="twelve"> <!-- This creates the next page and also names the page as "twelve" -->
 	<!-- The question number is set as the header in an orange color. -->
 	<div id="header" class="w3-container w3-flat-carrot"> <!--This creates a header for the page and defines its type/appearance. -->
-		<!-- This produces the page five-->	
+		<!-- This produces the page twelve-->	
 			 <h1>Results</h1>	
-		</div>
+</div>
 		<!-- This codes for the last page -->	
-		<div id="content" class="w3-container">
-			<!-- This is the results -->
-			<button onclick= "Results()">Results</button>
-			<p id="results">Results Here</p>
+<div id="content" class="w3-container">
+		<!-- This is the results -->
+	<button onclick= "Results()">Results</button>
+	<p id="results">Results Here</p>
 <a href="#one" class="w3-btn w3-black"> Go to Page One </a>
 </div><!-- /content -->
 	</div>
