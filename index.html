@@ -79,27 +79,31 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	// This function calculates the percentage chance of each variable by using the data the person who took the survey entered. 
 	// The variable resultText outputs the calculations done by the function on the results page
-	function migranePercent(){ // this function is used to calculate the percentage of migrane. it divides the count by 4 and then multiplies the result by 100.
-		migranePercent=(migrane_count / 11)*100;
+	function coldPercent(){ // this function is used to calculate the percentage of cold. it divides the count by 11 and then multiplies the result by 100.
+		coldPercent=(cold_count / 11)*100;
 	
 	}
 	
-	function migranePercent(){ // this function is used to calculate the percentage of migrane. it divides the count by 4 and then multiplies the result by 100.
-		migranePercent=(migrane_count / 11)*100;
+	function fluPercent(){ // this function is used to calculate the percentage of flu. it divides the count by 11 and then multiplies the result by 100.
+		fluPercent=(flu_count / 11)*100;
 	
 	}
 	
-	function migranePercent(){ // this function is used to calculate the percentage of migrane. it divides the count by 4 and then multiplies the result by 100.
-		migranePercent=(migrane_count / 11)*100;
+	function seasonalallergiesPercent(){ // this function is used to calculate the percentage of seasonalallergies. it divides the count by 11 and then multiplies the result by 100.
+		seasonalallergiesPercent=(seasonalallergies_count / 11)*100;
 	
 	}
 	function showResults() { // This function displays the percent of tension type headache and the percent of migrane.
-		tensiontypeheadachePercent();
-		migranePercent();
-		//var tensiontypeheadachePercent = tensiontypeheadache_count / total)*100;
-		//var migranePercent = migrane_count / total)*100;
+		coronavirusPercent();
+		coldPercent();
+		fluPercent();
+		seasonalallergiesPercent();
+		//var coronavirusPercent = tensiontypeheadache_count / total)*100;
+		//var coldPercent = migrane_count / total)*100;
+		//var fluPercent = tensiontypeheadache_count / total)*100;
+		//var seasonalallergiesPercent = migrane_count / total)*100;
 		var resultText = document.getElementById("results");
-	resultText.innerHTML = "Probability it is tensiontypeheadache =" + tensiontypeheadachePercent + "%<br> Probability it is a migrane =" + migranePercent + "%";
+	resultText.innerHTML = "Probability it is coronavirus =" + coronavirusPercent + "% <br> Probability it is a cold = " + coldPercent +  "%<br> Probability it is a flu =" + fluPercent "%<br> Probability it is seasonalallergies =" + seasonalallergiesPercent;
 	//function to show the results of the probabilities	
 	}
 	
