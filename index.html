@@ -145,11 +145,11 @@ img, object{
 	<!-- This prints the question and provides a black button with four statements as answer choices. 
 	The href attribute directs the user to the next page. --> 
     	<div id="content" class="w3-container"> <!-- This line of code differentiates the next line from the header and makes new space for it -->
-        <p>What are the lengths of your symptoms?</p> <!-- This line creattes a question for question one -->
-	<a href="#two" onclick="coronavirusAdd();" class="w3-btn w3-black"> 7-25 days</a> <!-- this creates the button for 7-25 and when you click it, the count for coronavirus symptoms increases-->
-	<a href="#two" onclick="coldAdd();" class="w3-btn w3-black"> Less than 14 days</a> <!-- this creates the button for Less than 14 days and when you click it, the count for cold symptoms decreases-->
-    	<a href="#two" onclick="fluAdd();" class="w3-btn w3-black"> 7-14 days</a> <!-- this creates the button for 7-14 days and when you click it, the count for flu symptoms increases-->
-	<a href="#two" onclick="seasonalallergiesAdd();" class="w3-btn w3-black"> Several weeks</a> <!-- this creates the button for several weeks and when you click it, the count for seasonal allergies symptoms increases-->
+        	<p>What are the lengths of your symptoms?</p> <!-- This line creattes a question for question one -->
+		<a href="#two" onclick="coronavirusAdd();" class="w3-btn w3-black"> 7-25 days</a> <!-- this creates the button for 7-25 and when you click it, the count for coronavirus symptoms increases-->
+		<a href="#two" onclick="coldAdd();" class="w3-btn w3-black"> Less than 14 days</a> <!-- this creates the button for Less than 14 days and when you click it, the count for cold symptoms decreases-->
+    		<a href="#two" onclick="fluAdd();" class="w3-btn w3-black"> 7-14 days</a> <!-- this creates the button for 7-14 days and when you click it, the count for flu symptoms increases-->
+		<a href="#two" onclick="seasonalallergiesAdd();" class="w3-btn w3-black"> Several weeks</a> <!-- this creates the button for several weeks and when you click it, the count for seasonal allergies symptoms increases-->
 	</div>
 </div>
 <!-- This codes for page two.-->
@@ -161,11 +161,11 @@ img, object{
 	<!-- This prints the question and provides a black button with four statements as answer choices. 
 	The href attribute directs the user to the next page. --> 
 	<div id="content" class="w3-container"> <!-- This line of code differentiates the next line from the header and makes new space for it -->
-	<p>How often and what kind of cough are you experiencing?</p> <!-- This line creates a question for question three -->
-	<a href="#three" onclick="coronavirusAdd();" class="w3-btn w3-black"> Common (usually dry)</a> <!-- this creates the button for Common (usually dry) and when you click it, the count for coronavirus symptoms increases-->
-	<a href="#three" onclick="coldAdd();" class="w3-btn w3-black"> Common (mild)</a> <!-- this creates the button for Common (mild) and when you click it, the count for cold symptoms decreases-->
-    	<a href="#three" onclick="fluAdd();" class="w3-btn w3-black"> Common (usually dry)</a> <!-- this creates the button for Common (usually dry) and when you click it, the count for flu symptoms increases-->
-	<a href="#three" onclick="seasonalallergiesAdd();" class="w3-btn w3-black"> Rare (usually dry unless it triggers asthma)</a> <!-- this creates the button for Rare (usually dry unless it triggers asthma) and when you click it, the count for seasonal allergies symptoms increases-->
+		<p>How often and what kind of cough are you experiencing?</p> <!-- This line creates a question for question three -->
+		<a href="#three" onclick="coronavirusAdd();" class="w3-btn w3-black"> Common (usually dry)</a> <!-- this creates the button for Common (usually dry) and when you click it, the count for coronavirus symptoms increases-->
+		<a href="#three" onclick="coldAdd();" class="w3-btn w3-black"> Common (mild)</a> <!-- this creates the button for Common (mild) and when you click it, the count for cold symptoms decreases-->
+    		<a href="#three" onclick="fluAdd();" class="w3-btn w3-black"> Common (usually dry)</a> <!-- this creates the button for Common (usually dry) and when you click it, the count for flu symptoms increases-->
+		<a href="#three" onclick="seasonalallergiesAdd();" class="w3-btn w3-black"> Rare (usually dry unless it triggers asthma)</a> <!-- this creates the button for Rare (usually dry unless it triggers asthma) and when you click it, the count for seasonal allergies symptoms increases-->
 	</div>
 </div>	
 <!-- /content and button for response-->										
@@ -177,9 +177,11 @@ img, object{
 	<!-- This prints the question and provides a black button with two statements as answer choices. 
 	The href attribute directs the user to the next page. -->
 	<div id="content" class="w3-container">
-	<p>Does the pain get worse the more physically active you are?</p> <!-- This line creates a question for question three -->
-	<a href="#four" onclick="migraneAdd();" class="w3-btn w3-black"> Yes</a> <!-- this creates the button for yes and when you click it, the count for tension type headache symptoms increases-->
-	<a href="#four" onclick="tensiontypeheadacheAdd();" class="w3-btn w3-black">No</a> <!-- this creates the button for no and when you click it, the count for migrane symptoms decreases-->
+		<p>Are you experiencing shortness of breath?</p> <!-- This line creates a question for question three -->
+		<a href="#four" onclick="coronavirusAdd();" class="w3-btn w3-black"> Sometimes</a> <!-- this creates the button for Sometimes and when you click it, the count for coronavirus symptoms increases-->
+		<a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> No</a> <!-- this creates the button for No and when you click it, the count for cold symptoms decreases-->
+    		<a href="#four" onclick="fluAdd();" class="w3-btn w3-black"> No</a> <!-- this creates the button for No and when you click it, the count for flu symptoms increases-->
+		<a href="#four" onclick="seasonalallergiesAdd();" class="w3-btn w3-black"> No</a> <!-- this creates the button for Rare No and when you click it, the count for seasonal allergies symptoms increases-->
 	</div>
 </div>
 <!-- content for page four. -->
@@ -191,22 +193,25 @@ img, object{
 	<!-- This prints the question and provides a black button with two statements as answer choices. 
 	The href attribute directs the user to the next page. -->
 	<div id="content" class="w3-container">
-		<p>Do you have sensitivity to light, sounds, and smells?</p> <!-- This line creates a question for question four -->
-		<a href="#five" onclick="migraneAdd();" class="w3-btn w3-black"> Yes</a> <!-- this creates the button for yes and when you click it, the count for tension type headache symptoms increases-->
-		<a href="#five" onclick="tensiontypeheadacheAdd();" class="w3-btn w3-black">No</a> <!-- this creates the button for no and when you click it, the count for migrane symptoms decreases-->
+		<p>Are you sneezing?</p> <!-- This line creates a question for question four -->
+		<a href="#five" onclick="coronavirusAdd();" class="w3-btn w3-black"> No</a> <!-- this creates the button for No and when you click it, the count for coronavirus symptoms increases-->
+		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> Yes, commonly</a> <!-- this creates the button for Yes, commonly and when you click it, the count for cold symptoms decreases-->
+    		<a href="#five" onclick="fluAdd();" class="w3-btn w3-black"> No</a> <!-- this creates the button for No and when you click it, the count for flu symptoms increases-->
+		<a href="#five" onclick="seasonalallergiesAdd();" class="w3-btn w3-black"> Yes, commonly</a> <!-- this creates the button for Yes, commonly and when you click it, the count for seasonal allergies symptoms increases-->
 	</div>
 </div>
 <!-- This code is for page five -->
-	</div>
+	<div class="page" id="five"> <!-- This creates the next page and also names the page as "four" -->
 		<h1>Question 5</h1>
 	</div>
 	<!-- this prints the question and gives a black button that provides two statements as answer choices. The href attribute directs the user to the next page. -->
     	<div id="content" class="w3-container"> <!-- This line of code differentiates the next line from the header and makes new space for it -->
-        <p>Are your eyes watery or itchy?</p> <!-- This line creattes a question for question one -->
-        <p>Do you have pain on both sides of your head?</p> <!-- This line creattes a question for question one -->
-	<a href="#two" onclick="tensiontypeheadacheAdd();" class="w3-btn w3-black"> Yes</a> <!-- this creates the button for yes and when you click it, the count for tension type headache symptoms increases-->
-	<a href="#two" onclick="migraneAdd();" class="w3-btn w3-black"> No</a> <!-- this creates the button for no and when you click it, the count for migrane symptoms decreases-->
-    	</div>
+       		<p>Do you have a runny or stuffy nose?</p> <!-- This line creates a question for question four -->
+		<a href="#six" onclick="coronavirusAdd();" class="w3-btn w3-black"> Yes, but it's rare</a> <!-- this creates the button for No and when you click it, the count for coronavirus symptoms increases-->
+		<a href="#six" onclick="coldAdd();" class="w3-btn w3-black"> Yes, it's common</a> <!-- this creates the button for Yes, commonly and when you click it, the count for cold symptoms decreases-->
+    		<a href="#six" onclick="fluAdd();" class="w3-btn w3-black"> Yes, sometimes</a> <!-- this creates the button for No and when you click it, the count for flu symptoms increases-->
+		<a href="#six" onclick="seasonalallergiesAdd();" class="w3-btn w3-black"> Yes, it's common</a> <!-- this creates the button for Yes, commonly and when you click it, the count for seasonal allergies symptoms increases-->
+	</div>
 </div>
 <!-- This codes for page two.-->
 <div class="page" id="two"> <!-- This creates the next page and also names the page as "two" -->
