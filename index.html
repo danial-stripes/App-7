@@ -17,10 +17,10 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-The goal of this code is to diagnose whether someone has a tension type headache or migrane by basing the code on their responses and then supplying them with their results.
+The goal of this code is to diagnose whether someone may have coronavirus, a cold, the flu, or seasonal allergies by basing the code on their response and then supplying them with their results.
  
 Known Issues:
-A known issue of the goal is that the type of headache that the person taking the survey has may not even be a tension type headache or migrane because there are many more types of headaches. This determination is much more extensive than simply diagnosing the type of headache with 4 questions.
+A known issue of the goal is that the type of condition the person taking this survey may not even be any of the options because there are many more types of sicknesses. This determination is much more extensive than simply diagnosing the type of headache with 11 questions. 
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -35,14 +35,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</head> 
 	
 <!-- results will display the probability between a tension-type headache or a migrane -->
-<!-- copy pasted my code from app 3 right here -->
+<!-- copy pasted my code from app 4 right here -->
 <script>
 	// This defines and starts the variables because the initial value is set to 0.
        	var coronavirus_count = 0;
         var cold_count = 0;
 	var flu_count = 0; 
 	var seasonalallergies_count = 0;
-	// these are the variables. to to calculate the percentages, the count of each will be divided by four and then multiplied by 100
+	// these are the variables to calculate the percentages, the count of each will be divided by 11 and then multiplied by 100
 	
 
         function coronavirusAdd(){ // this function is used to add 1 every time "yes" to coronavirus is recorded.
@@ -101,7 +101,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		//var fluPercent = flu_count / total)*100;
 		//var seasonalallergiesPercent = seasonalallergies_count / total)*100;
 		var resultText = document.getElementById("results");
-	resultText.innerHTML = "Probability it is coronavirus=" + coronavirusPercent + "%" + "<br> Probability it is a cold =" + coldPercent +  "%" + "<br> Probability it is a flu=" + fluPercent + "%" + "<br> Probability it is seasonalallergies=" + seasonalallergiesPercent + "%";
+	resultText.innerHTML = "Probability it is coronavirus=" + coronavirusPercent + "%" + "<br> Probability it is a cold=" + coldPercent +  "%" + "<br> Probability it is the flu=" + fluPercent + "%" + "<br> Probability it is seasonalallergies=" + seasonalallergiesPercent + "%";
 	//function to show the results of the probabilities	
 	}
 	
@@ -158,8 +158,7 @@ img, object{
 		<h1>Question 1</h1>
 	</div>
 	<!-- this prints the question and gives a black button that provides two statements as answer choices. The href attribute directs the user to the next page. -->
-	<!-- This prints the question and provides a black button with four statements as answer choices. 
-	The href attribute directs the user to the next page. --> 
+	<!-- This prints the question and provides a black button with four statements as answer choices. The href attribute directs the user to the next page. --> 
     	<div id="content" class="w3-container"> <!-- This line of code differentiates the next line from the header and makes new space for it -->
         	<p>What are the lengths of your symptoms?</p> <!-- This line creates a question for question one -->
 		<a href="#two" onclick="coronavirusAdd();" class="w3-btn w3-black"> 7-25 days</a> <!-- this creates the button for 7-25 and when you click it, the count for coronavirus symptoms increases-->
@@ -201,7 +200,7 @@ img, object{
 	</div>
 </div>
 <!-- content for page four. -->
-	<div class="page" id="four"> <!-- This creates the next page and also names the page as "four" -->
+<div class="page" id="four"> <!-- This creates the next page and also names the page as "four" -->
 		<!-- The question number is set as the header in an orange color. -->
 	<div id="header" class="w3-container w3-flat-carrot"> <!--This creates a header for the page and defines its type/appearance. -->
 		<h1>Question 4</h1>
@@ -217,7 +216,7 @@ img, object{
 	</div>
 </div>
 <!-- This code is for page five -->
-	<div class="page" id="five"> <!-- This creates the next page and also names the page as "four" -->
+<div class="page" id="five"> <!-- This creates the next page and also names the page as "four" -->
 	<!-- The question number is set as the header in an orange color. -->
 	<div id="header" class="w3-container w3-flat-carrot"> <!--This creates a header for the page and defines its type/appearance. -->
 		<h1>Question 5</h1>
@@ -232,8 +231,8 @@ img, object{
 	</div>
 </div>
 <!-- This codes for page six.-->
-	<div class="page" id="six"> <!-- This creates the next page and also names the page as "two" -->
-				<!-- The question number is set as the header in an orange color. -->
+<div class="page" id="six"> <!-- This creates the next page and also names the page as "two" -->
+	<!-- The question number is set as the header in an orange color. -->
 	<div id="header" class="w3-container w3-flat-carrot"> <!--This creates a header for the page and defines its type/appearance. -->
 		<h1>Question 6</h1>
 	</div>
@@ -320,7 +319,7 @@ img, object{
     		<a href="#twelve" onclick="fluAdd();" class="w3-btn w3-black"> Sometimes</a> <!-- this creates the button for No and when you click it, the count for flu symptoms increases-->
 		<a href="#twelve" onclick="seasonalallergiesAdd();" class="w3-btn w3-black"> Sometimes (usually mild)</a> <!-- this creates the button for Yes, commonly and when you click it, the count for seasonal allergies symptoms increases-->
 	</div>
-</div><!-- This codes for page twelve.-->
+</div> <!-- This codes for page twelve.-->
 	</div>
 	
 <!-- This produces page twelve.-->
