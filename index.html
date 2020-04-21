@@ -101,7 +101,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		//var fluPercent = flu_count / total)*100;
 		//var seasonalallergiesPercent = seasonalallergies_count / total)*100;
 		var resultText = document.getElementById("results");
-	resultText.innerHTML = "Probability it is coronavirus=" + coronavirusPercent + "%" + "<br> Probability it is a cold=" + coldPercent +  "%" + "<br> Probability it is the flu=" + fluPercent + "%" + "<br> Probability it is seasonalallergies=" + seasonalallergiesPercent + "%";
+	resultText.innerHTML = "Probability it is coronavirus=" + coronavirusPercent() + "%" + "<br> Probability it is a cold=" + coldPercent() +  "%" + "<br> Probability it is the flu=" + fluPercent() + "%" + "<br> Probability it is seasonalallergies=" + seasonalallergiesPercent() + "%";
 	//function to show the results of the probabilities	
 	}
 	
